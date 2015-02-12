@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Georgia resident information</title>
+	<script src="actions.js"></script>
+</head>
+<body style="background-color:pink">
+	<div style="width: 700px; margin-left: auto ; margin-right: auto ;">
+<h1 style = "font-size:24px">Please tell us who you are (Georgia residents only)</h1>
+<form>
+<label>First Name</label>
+<input type = "text" name = "fName" value = "First Name" id="fName" onchange="fNameFix()"/>
+<label>Last Name</label>
+<input type = "text" name="lName" value = "Last Name" id="lName" onchange="lNameFix()"/>
+<br>
+<label>Telephone</label>
+<input type="text" name="tele" value = "000-000-0000" id="tele" onchange="teleFix()"/>
+<br>
+<label>City</label>
+<input type="text" name="city" value="Atlanta" id= "city" onkeyup="nameCheck()"/>
+<label>Zip Code</label>
+<select name="Zip">
+
+</select>
+<br>
+
+<input type="submit" name="infoSub" value="Share personal info with our unscrupulous marketing staff"/>
+
+</form>
+</div>
+
+</body>
+</html>
