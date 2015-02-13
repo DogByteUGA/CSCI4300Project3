@@ -38,7 +38,20 @@ function phonenumber(inputtxt)
 function nameCheck(){
 	var str = document.getElementById("city");
 	var ret = "shit";
-	str.value = ret.value;
-
-
+	/*str.value = ret.value;*/
+	zipFill(str);
+}
+function zipFill(str){
+	var x = document.getElementById("zip");
+	while(x.options.length > 0)
+	{
+		x.remove(x.options.length - 1);
+	}
+	for(var i = 0; i < cities.length; i++)
+	{
+		if (cities[i] == str.value)
+		{
+		x.options[x.options.length] = new Option(zips[i],x.options.length - 1);
+		}
+	}
 }
