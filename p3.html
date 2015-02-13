@@ -9,23 +9,20 @@
 <h1 style = "font-size:24px">Please tell us who you are (Georgia residents only)</h1>
 <form>
 <label>First Name</label>
-<input type = "text" name = "fName" value = "First Name" id="fName" onchange="fNameFix()"/>
+	<input type = "text" name = "fName" value = "First Name" id="fName" onchange="fNameFix()" required/>
 <label>Last Name</label>
-<input type = "text" name="lName" value = "Last Name" id="lName" onchange="lNameFix()"/>
+	<input type = "text" name="lName" value = "Last Name" id="lName" onchange="lNameFix()" required/>
 <br>
 <label>Telephone</label>
-<input type="text" name="tele" value = "000-000-0000" id="tele" onchange="teleFix()"/>
+	<input type="text" name="tele" value = "000-000-0000" id="tele" onchange="teleFix()" required/>
 <br>
 <label>City</label>
-<input type="text" name="city" value="Atlanta" id= "city" onkeyup="nameCheck()"/>
+	<input type="text" name="city" value="Atlanta" id= "city" onkeyup="nameCheck()" required/>
 <label>Zip Code</label>
-<select name="Zip" id="zip">
-
+<select name="Zip" id="zip" required>
 </select>
 <br>
-
-<input type="submit" name="infoSub" value="Share personal info with our unscrupulous marketing staff"/>
-
+	<input type="submit" name="infoSub" value="Share personal info with our unscrupulous marketing staff"/>
 </form>
 </div>
 
