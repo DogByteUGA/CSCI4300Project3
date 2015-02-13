@@ -35,12 +35,68 @@ function phonenumber(inputtxt)
 	   return false;
      }
 }
-function nameCheck(){
+function nameFill(){
 	var str = document.getElementById("city");
-	var ret = "shit";
-	/*str.value = ret.value;*/
 	zipFill(str);
+	index = index +1;
+	console.log(index);
+	var i = 0;
+	var j = 0;
+	var arrLen = cities.length;
+	var name; 
+	var letter;
+	var realLetter;
+	var auto = "";
+    var matchNum = 0;
+    //get every name in array
+			for(i = 0; i<arrLen; i++){
+				name = cities[i];
+				//check each letter in each name
+				for(j = 0; j<index; j++){
+					letter = name.charAt(j);
+				    //realLetter = str.charAt(j);
+				    realLetter = str.value[j];
+				    
+			       if(letter != realLetter){
+			       	//if they arent the same do nothing
+			      
+			       }else {
+			       	//if they are make it the proper name
+			       	  
+			       	    auto = name;
+			       	    index--;
+			       	   
+			       }
+			   }
+			}
+
+			  str.value = auto;
+						console.log("auto");
+			       	    console.log(auto.value);
 }
+
+function nameCheck(){	
+	var str = document.getElementById("city");
+	var i = 0;
+	var checker = false;
+	while(checker == false && i < cities.length)
+	{
+		if (str.value == cities[i])
+		{
+			checker = true;
+		}
+		else
+		{
+			checker = false;
+		}
+		i++;
+	}
+	if (checker == false)
+	{
+		alert("Not a valid City Name");
+	}
+}
+
 function zipFill(str){
 	var x = document.getElementById("zip");
 	while(x.options.length > 0)
